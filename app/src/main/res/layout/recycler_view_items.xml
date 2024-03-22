@@ -1,0 +1,49 @@
+<!-- res/layout/recyclerview_item.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:ignore="MissingClass">
+
+    <!-- EditText pour le titre à gauche -->
+
+    <TextView
+        android:id="@+id/tvPlace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="Lieu : " />
+
+    <TextView
+        android:id="@+id/tvTitreRv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- ImageButton pour supprimer à droite -->
+    <ImageButton
+        android:id="@+id/bDeleteIt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/tvTitreRv"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/delete" />
+
+    <!-- EditText pour la description à gauche -->
+    <TextView
+        android:id="@+id/tvDescRv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitreRv"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"/>
+
+</RelativeLayout>

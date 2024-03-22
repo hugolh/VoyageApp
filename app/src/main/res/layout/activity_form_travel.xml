@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormTravelActivity">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tvCreateTravel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:text="@string/newVoyage"
+        android:textSize="24sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="78dp" />
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tniName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:hint="@string/Name"
+        tools:ignore="MissingConstraints"
+        app:helperText="@string/requis"
+        app:layout_constraintEnd_toStartOf="@+id/tvCreateTravel"
+        app:layout_constraintStart_toEndOf="@+id/tvCreateTravel"
+        app:layout_constraintTop_toBottomOf="@+id/tvCreateTravel"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tnName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="14dp"
+            tools:layout_editor_absoluteY="51dp" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnDatePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="16dp"
+        android:text="Select a Date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tniName"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvSelectedDate"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/btnDatePicker"
+        app:layout_constraintStart_toEndOf="@+id/btnDatePicker"
+        app:layout_constraintTop_toBottomOf="@+id/btnDatePicker"
+        tools:ignore="MissingConstraints" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tniMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:hint="@string/Description"
+        tools:ignore="MissingConstraints"
+        app:helperText="@string/requis"
+        app:layout_constraintEnd_toStartOf="@+id/tvSelectedDate"
+        app:layout_constraintStart_toEndOf="@+id/tvSelectedDate"
+        app:layout_constraintTop_toBottomOf="@+id/tvSelectedDate"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tnMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="14dp"
+            tools:layout_editor_absoluteY="51dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/bAddIt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Ajouter un point sur l'itinéraire"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/tniMessage"
+        app:layout_constraintStart_toEndOf="@+id/tniMessage"
+        app:layout_constraintTop_toBottomOf="@+id/tniMessage"
+        app:layout_constraintWidth_percent="0.8"/>
+
+
+    <TextView
+        android:id="@+id/textViewMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="@string/visualisation_voyage"
+        android:textSize="24sp"
+        tools:ignore="MissingConstraints,RtlHardcoded"
+        app:layout_constraintEnd_toStartOf="@+id/bAddIt"
+        app:layout_constraintStart_toEndOf="@+id/bAddIt"
+        app:layout_constraintTop_toBottomOf="@+id/bAddIt"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="78dp" />
+
+    <com.mapbox.maps.MapView
+        android:id="@+id/mvTravel"
+        android:layout_width="328dp"
+        android:layout_height="311dp"
+        android:layout_marginTop="40dp"
+        app:mapbox_cameraTargetLat="46.1420063567736"
+        app:mapbox_cameraTargetLng="-1.150880515917745"
+        app:mapbox_cameraZoom="9.0"
+        app:layout_constraintEnd_toStartOf="@+id/bAddIt"
+        app:layout_constraintStart_toEndOf="@+id/bAddIt"
+        app:layout_constraintTop_toBottomOf="@+id/bAddIt"
+         />
+
+    <Button
+        android:id="@+id/bSubmitTravelButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Créer un voyage"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/mvTravel"
+        app:layout_constraintStart_toEndOf="@+id/mvTravel"
+        app:layout_constraintTop_toBottomOf="@+id/mvTravel"
+        app:layout_constraintWidth_percent="0.8"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

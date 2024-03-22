@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".TravelActivity">
+
+        <com.mapbox.maps.MapView
+            android:id="@+id/mvTravelVis"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:mapbox_cameraTargetLat="46.1420063567736"
+            app:mapbox_cameraTargetLng="-1.150880515917745"
+            app:mapbox_cameraZoom="9.0" />
+
+        <ImageButton
+            android:id="@+id/bNextPlace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="350dp"
+            android:src="@drawable/next"
+            android:text="Prochain lieu"
+            app:layout_constraintTop_toBottomOf="@+id/mvTravelVis"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tvTravelTitle"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Nan"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/bNextPlace"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.095"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.947"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Nan"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@+id/tvTravelTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.095"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nan"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@+id/tvDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tvListPlaces"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tvListPlaces"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Liste des lieux"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvDesc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+            android:layout_marginTop="8dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvListPlaces" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

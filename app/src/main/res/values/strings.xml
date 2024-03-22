@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Carnet de Voyage</string>
+    <string name="mapbox_access_token">pk.eyJ1IjoiaHVnb2xoIiwiYSI6ImNsbms5enJ4MDA1Mjkya3BiZXd0MmNibmwifQ.5_COIXK9om2af_kbPpnL1g</string>
+    <string name="carte">Carte</string>
+    <string name="cr_er_un_nouveau_voyage">Créer un nouveau voyage</string>
+    <string name="bienvue_sur_ton_app_de_voyage_pr_f_rer">Bienvue sur ton app de voyage préférer</string>
+    <string name="Name">Name</string>
+    <string name="newVoyage">Créer un nouveau Voyage :</string>
+    <string name="requis">Requis</string>
+    <string name="Date">Date</string>
+    <string name="Description">Description</string>
+    <string name="newItinerary">"Ajouter un nouvel itinéraire au voyage - "</string>
+    <string name="Titre">Titre</string>
+    <string name="choisir_un_lieu">Choisir un lieu</string>
+    <string name="visualisation_voyage">Visualisation du voyage</string>
+    <string name="lieu">Choisir une ville</string>
+    <string name="voyages">"Voyages"</string>
+    <string name="Listedesvoyages">Liste des voyages</string>
+    <string name="not_saved">Not saved</string>
+    <string name="invalid_data">invalid data</string>
+</resources>

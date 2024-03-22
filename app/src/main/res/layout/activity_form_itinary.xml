@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvAddIt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/newItinerary"
+        android:textSize="18sp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintEnd_toStartOf="@+id/mvItinerary"
+        app:layout_constraintStart_toEndOf="@+id/mvItinerary"
+        app:layout_constraintTop_toBottomOf="@+id/mvItinerary"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tnititre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:hint="@string/Titre"
+        tools:ignore="MissingConstraints"
+        app:helperText="@string/requis"
+        app:layout_constraintEnd_toStartOf="@+id/tvAddIt"
+        app:layout_constraintStart_toEndOf="@+id/tvAddIt"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddIt"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tnName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="14dp"
+            tools:layout_editor_absoluteY="51dp" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tniMessageIt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:hint="@string/Description"
+        tools:ignore="MissingConstraints"
+        app:helperText="@string/requis"
+        app:layout_constraintEnd_toStartOf="@+id/tnititre"
+        app:layout_constraintStart_toEndOf="@+id/tnititre"
+        app:layout_constraintTop_toBottomOf="@+id/tnititre"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tnMessageIt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="14dp"
+            tools:layout_editor_absoluteY="51dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="@string/choisir_un_lieu"
+        android:textSize="24sp"
+        tools:ignore="MissingConstraints,RtlHardcoded"
+        app:layout_constraintEnd_toStartOf="@+id/tniMessageIt"
+        app:layout_constraintStart_toEndOf="@+id/tniMessageIt"
+        app:layout_constraintTop_toBottomOf="@+id/tniMessageIt"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="78dp" />
+
+    <com.mapbox.maps.MapView
+        android:id="@+id/mvItinerary"
+        android:layout_width="match_parent"
+        android:layout_height="430dp"
+        android:layout_marginTop="52dp"
+        app:mapbox_cameraTargetLat="46.1420063567736"
+        app:mapbox_cameraTargetLng="-1.150880515917745"
+        app:mapbox_cameraZoom="9.0"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/tniMessageIt"
+        app:layout_constraintStart_toEndOf="@+id/tniMessageIt"
+        app:layout_constraintTop_toBottomOf="@+id/tniMessageIt"
+        android:id="@+id/bSubmitItinerary"
+        android:textColorHint="@color/white"
+        android:hint="Ajouter l'itinéraire"
+        app:layout_constraintWidth_percent="0.8"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
