@@ -1,4 +1,5 @@
-# REAMDE Projet carnet de voyage
+# REAMDE -- Extract from a personal university project 
+## Projet carnet de voyage
 
 ![alt text](bon-voyage-41.gif)
 
